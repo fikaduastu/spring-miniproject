@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mastercard-service-deploy
+  labels:
+    app: mastercard-service-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app : mastercard-service-app
+  template:
+    metadata:
+      labels:
+        app: mastercard-service-app
+    spec:
+      containers:
+      - name: mastercard-service-app
+        image: ethan2022/mastercard-service
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 9092
+
+---
+
+apiVersion: v1
+
+kind: Service
+metadata:
+  name:  mastercard-service-svc
+spec:
+  selector:
+    app:  mastercard-service-app
+  ports:
+  - protocol: TCP
+    port:  9092
+    targetPort:  9092

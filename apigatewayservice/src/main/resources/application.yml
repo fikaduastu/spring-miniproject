@@ -1,0 +1,67 @@
+server:
+  port: 8999
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      default-filters:
+        - name: JwtAuthenticationFilter
+      routes:
+        - id: auth
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/auth/**
+        - id: api
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/api/user/**
+        - id: creditcard
+          uri: lb://CREDITCARD-SERVICE
+          predicates:
+            - Path=/api/card/**
+        - id: mastercard
+          uri: lb://MASTERCARD-SERVICE
+          predicates:
+            - Path=/api/master/**
+        - id: payment
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payments/**
+        - id: order
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/api/**
+        - id: product
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: PAYMENT-SERVICE
+#          uri: lb://PAYMENT-SERVICE
+#          predicates:
+#            - Path=/payments/**
+#        - id: CREDITCARD-SERVICE
+#          uri: lb://CREDITCARD-SERVICE
+#          predicates:
+#            - Path=/api/**
+#        - id: MASTERCARD-SERVICE
+#          uri: lb://MASTERCARD-SERVICE
+#          predicates:
+#            - Path=/api/**
+#        - id: ACCOUNT-SERVICE
+#          uri: lb://ACCOUNT-SERVICE
+#          predicates:
+#            - Path=/api/user/*
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka

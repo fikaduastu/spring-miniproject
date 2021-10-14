@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-conf-prd
+data:
+  host: mysqlprd
+  name: productdatabase

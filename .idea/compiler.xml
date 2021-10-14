@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apigatewayservice" />
+        <module name="creditcardservice" />
+        <module name="servicediscovery" />
+        <module name="productservice" />
+        <module name="configurationservice" />
+        <module name="accountservice" />
+        <module name="paymentservice" />
+        <module name="mastercardservice" />
+        <module name="orderservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="accountservice" target="11" />
+      <module name="apigatewayservice" target="11" />
+      <module name="configurationservice" target="11" />
+      <module name="creditcardservice" target="11" />
+      <module name="mastercardservice" target="11" />
+      <module name="orderservice" target="11" />
+      <module name="paymentservice" target="11" />
+      <module name="productservice" target="11" />
+      <module name="servicediscovery" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="accountservice" options="-parameters" />
+      <module name="apigatewayservice" options="-parameters" />
+      <module name="configurationservice" options="-parameters" />
+      <module name="creditcardservice" options="-parameters" />
+      <module name="mastercardservice" options="-parameters" />
+      <module name="orderservice" options="-parameters" />
+      <module name="paymentservice" options="-parameters" />
+      <module name="productservice" options="-parameters" />
+      <module name="servicediscovery" options="-parameters" />
+    </option>
+  </component>
+</project>

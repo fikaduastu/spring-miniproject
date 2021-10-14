@@ -1,0 +1,31 @@
+server:
+  port: 9094
+spring:
+  application:
+    name: PRODUCT-SERVICE
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  data:
+    jpa:
+      repositories:
+        enabled: true
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${DB_HOST:localhost}/${DB_NAME:prddb}?useSSL=false
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:admin}
+
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-0.eureka.default.svc.cluster.local:8761/eureka
+

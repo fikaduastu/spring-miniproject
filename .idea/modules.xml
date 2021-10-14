@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/accountservice/accountservice.iml" filepath="$PROJECT_DIR$/accountservice/accountservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apigatewayservice/apigatewayservice.iml" filepath="$PROJECT_DIR$/apigatewayservice/apigatewayservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configurationservice/configurationservice.iml" filepath="$PROJECT_DIR$/configurationservice/configurationservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creditcardservice/creditcardservice.iml" filepath="$PROJECT_DIR$/creditcardservice/creditcardservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mastercardservice/mastercardservice.iml" filepath="$PROJECT_DIR$/mastercardservice/mastercardservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orderservice/orderservice.iml" filepath="$PROJECT_DIR$/orderservice/orderservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paymentservice/paymentservice.iml" filepath="$PROJECT_DIR$/paymentservice/paymentservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productservice/productservice.iml" filepath="$PROJECT_DIR$/productservice/productservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servicediscovery/servicediscovery.iml" filepath="$PROJECT_DIR$/servicediscovery/servicediscovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-mini-2.iml" filepath="$PROJECT_DIR$/.idea/spring-mini-2.iml" />
+    </modules>
+  </component>
+</project>
